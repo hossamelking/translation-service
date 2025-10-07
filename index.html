@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multilingual Translator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Translation Service</h1>
+      <p>
+        Translate text between English (EN), Turkish (TR) and Arabic (AR) and
+        translate PDF files.
+      </p>
+    </header>
+    <main>
+      <section id="text-translation">
+        <h2>Text Translation</h2>
+        <div class="language-select">
+          <label for="sourceLang">Source:</label>
+          <select id="sourceLang">
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+            <option value="ar">Arabic</option>
+            <option value="auto">Auto</option>
+          </select>
+          <label for="targetLang">Target:</label>
+          <select id="targetLang">
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+          </select>
+          <button id="swapLang" title="Swap languages">↔︎ Swap</button>
+        </div>
+        <textarea
+          id="sourceText"
+          placeholder="Enter text to translate..."
+          rows="6"
+        ></textarea>
+        <button id="translateBtn">Translate</button>
+        <div id="textResult" class="result"></div>
+      </section>
+      <section id="file-translation">
+        <h2>PDF Translation</h2>
+        <p>Select a PDF file to translate.</p>
+        <div class="language-select">
+          <label for="sourceLangFile">Source:</label>
+          <select id="sourceLangFile">
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+            <option value="ar">Arabic</option>
+            <option value="auto">Auto</option>
+          </select>
+          <label for="targetLangFile">Target:</label>
+          <select id="targetLangFile">
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+          </select>
+        </div>
+        <input type="file" id="fileInput" accept=".pdf" />
+        <button id="translateFileBtn">Translate File</button>
+        <div id="fileResult" class="result"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Translation Service</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
