@@ -1,7 +1,8 @@
 // Base URL of LibreTranslate server. Some public instances are listed at
 // https://docs.libretranslate.com/community/mirrors/. You can change the
 // hostname here if one becomes unavailable or requires an API key.
-const API_HOST = 'https://lt.blitzw.in';
+// Changed API host to a reliable LibreTranslate instance after the previous host became unavailable.
+const API_HOST = 'https://libretranslate.de';
 
 // Utility function to swap source and target languages in text translation
 function swapLanguages() {
